@@ -1,0 +1,212 @@
+/* Music Player */
+.music-player-section {
+    width: 100%;
+    height: 250px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(190, 149, 228);
+    z-index: 3;
+}
+
+.emptySpace {
+    height: 250px;
+}
+
+.music-seek-bar {
+    -webkit-appearance: none;
+    width: 100%;
+    position: absolute;
+    top: -4px;
+    height: 8px;
+    background-color: blueviolet;
+    overflow: hidden;
+}
+
+.music-seek-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    background-color:blue;
+    cursor: pointer;
+    box-shadow: -400px 0 0 400px var(--primary-color);
+}
+
+.current-song-name{
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.artist-name {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+
+.cover {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.controls{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 30px;
+}
+
+.controls span{
+    display: none;
+    opacity: 0;
+    transition: 1s;
+}
+
+.music-player-section.active .controls{
+    justify-content: space-between;
+}
+
+.music-player-section.active .controls span{
+    font-size: 25px;
+    display: block;
+    opacity: 0.5;
+}
+
+.music-player-section.active .controls span.active{
+    color: brown;
+    opacity: 1;
+}
+
+.controls .main i{
+    margin: 0 5px;
+    display: none;
+}
+
+.controls .main i.active{
+    display: inline;
+}
+
+
+
+.current-time{
+    font-family: sans-serif;
+    position: absolute;
+    margin-top: 15px;
+    left: 60px;
+}
+
+.duration{
+    font-family: sans-serif;
+    position: absolute;
+    margin-top: 15px;
+    right: 60px;
+}
+/* Unused back and playlist icons
+.icon{
+    position: absolute;
+    top: 60px;
+    transform: scale(1.3);
+}
+
+.back-btn{
+    left: 40px;
+}
+
+.nav-btn{
+    right: 40px;
+}
+*/
+/* volume button */
+
+.volume-slider{
+    -webkit-appearance: none;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    right: -35px;
+    bottom: 80px;
+    transform: rotate(-90deg);
+    border-radius: 20px;
+    background-color: rgb(93, 20, 161);
+    overflow: hidden;
+    opacity: 1;
+    display: block;
+}
+/* Unused
+.volume-slider.active{
+    opacity: 1;
+    display: block;
+}
+*/
+.volume-slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 40px;
+    width: 10px;
+    background-color: aqua;
+}
+
+/* Playlist Section */
+.playlist {
+    position: relative;
+    top: -20px;
+}
+
+/* Song Group */
+.queue {
+    width: 98%;
+    height: 60px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid;
+    border-color: rgb(123, 58, 187);
+}
+
+/* Album Image */
+.queue-cover {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin-right: 20px;
+    position: relative;
+}
+
+.queue-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Pause Button */
+.queue-cover i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    display: none;
+}
+
+.queue.active i{
+    display: block;
+}
+
+/* Title Font and Size */
+.title {
+    font-family: sans-serif;
+    font-size: 22px;
+}
+
+/* Name of Song font */
+.queue .name{
+    font-family: sans-serif;
+    font-size: 22px;
+}
